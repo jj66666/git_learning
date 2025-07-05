@@ -12,6 +12,7 @@ path1 = r'./全球温度统计结果.csv'
 city_data = pd.read_csv(path,encoding='utf-8')
 city = pd.read_csv(path1,encoding='utf-8')
 city_list = list(city['城市'])
+city_num = len(city_list)
 for i in range(len(city_data)):
 	try:
 		if city_data['城市'].iloc[i] not in city_list:
@@ -55,3 +56,4 @@ for i in range(len(city_data)):
 	except Exception as e:
 		city_df = pd.DataFrame(city_list,columns=['城市'])
 		city_df.to_csv(r'./已下载城市列表.csv',index=False)
+        
