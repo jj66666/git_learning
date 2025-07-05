@@ -12,6 +12,8 @@ url = "https://archive-api.open-meteo.com/v1/archive"
 path = './全球所有城市经纬度数据.csv'
 path1 = r'./全球温度统计结果.csv'
 url2 = "www.baidu.com"
+def marcket:
+    print('网上商城功能100%')
 city_data = pd.read_csv(path,encoding='utf-8')
 city = pd.read_csv(path1,encoding='utf-8')
 city_list = list(city['城市'])
