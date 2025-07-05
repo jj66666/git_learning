@@ -4,8 +4,10 @@ import requests_cache
 import pandas as pd
 from retry_requests import retry
 
-# Make sure all required weather variables are listed here
+#  Make sure all required weather variables are listed here
 # The order of variables in hourly or daily is important to assign them correctly below
+def bug:
+    print("bug 已修复")
 url = "https://archive-api.open-meteo.com/v1/archive"
 path = './全球所有城市经纬度数据.csv'
 path1 = r'./全球温度统计结果.csv'
@@ -57,4 +59,5 @@ for i in range(len(city_data)):
 	except Exception as e:
 		city_df = pd.DataFrame(city_list,columns=['城市'])
 		city_df.to_csv(r'./已下载城市列表.csv',index=False)
+        
         
